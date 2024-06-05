@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.add.AddStoryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Add Story"
+        android:background="@color/backgroundToolbar"
+        app:titleTextColor="#fff"
+        app:menu="@menu/option_menu" />
+
+    <ImageView
+        android:id="@+id/img_posting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_photo_white"
+        app:layout_constraintBottom_toTopOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:ignore="ContentDescription" />
+
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_button_green1"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/camera"
+        app:layout_constraintBottom_toTopOf="@id/ted_description"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_gallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button_green1"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/galery"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ted_description"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/img_posting"
+        app:layout_constraintStart_toStartOf="@id/img_posting"
+        app:layout_constraintTop_toBottomOf="@id/guideline2">
+
+        <com.example.storyappfix.view.custom.CustomTextInput
+            android:id="@+id/ti_description"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:hint="@string/description"
+            android:inputType="none"
+            android:padding="16dp"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            tools:ignore="Autofill"
+            tools:text="@string/description" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.example.storyappfix.view.custom.ButtonCustom
+        android:id="@+id/btn_upload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button_green1"
+        android:enabled="false"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/upload_story"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ted_description"
+        app:layout_constraintStart_toStartOf="@id/ted_description"
+        app:layout_constraintTop_toBottomOf="@id/ted_description" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
